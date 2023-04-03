@@ -3,6 +3,7 @@
 Define isWinner function, a solution to the Prime Game problem
 """
 
+
 def primes(n):
     """Return list of prime numbers between 1 and n inclusive
        Args:

@@ -6,7 +6,8 @@ def isWinner(x, nums):
     """returns the winner of the game"""
     maria_wins = 0
     ben_wins = 0
-
+    if not nums or x < 1:
+        return None
     for n in nums:
         primes = [True] * (n + 1)
         primes[0] = primes[1] = False
@@ -25,7 +26,6 @@ def isWinner(x, nums):
 
     if maria_wins > ben_wins:
         return "Maria"
-    elif ben_wins > maria_wins:
+    if ben_wins > maria_wins:
         return "Ben"
-    else:
-        return None
+    return None
